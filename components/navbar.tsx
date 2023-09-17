@@ -14,7 +14,7 @@ const Navbar = async () => {
     <Container>
       <div className="relative px-4 sm:px-8 h-24 md:h-40 flex items-center justify-between">
         <MainNav data={categories} />
-        <div className="h-20 w-20 md:h-36 md:w-36 absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+        <div className="h-28 w-28 md:h-48 md:w-48 absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
           <Link href="/">
             <Image
               fill

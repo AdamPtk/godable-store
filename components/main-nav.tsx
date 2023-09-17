@@ -30,7 +30,7 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
 
   return (
     <>
-      <nav className="mx-6 hidden sm:flex items-center space-x-4 lg:space-x-6">
+      <nav className="mx-6 hidden md:flex items-center space-x-4 lg:space-x-6">
         {routes.map((route) => (
           <Link
             key={route.href}
@@ -45,7 +45,7 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
         ))}
       </nav>
       <DropdownMenu>
-        <DropdownMenuTrigger className="sm:hidden ml-4">
+        <DropdownMenuTrigger className="md:hidden ml-4">
           <Menu />
         </DropdownMenuTrigger>
         <DropdownMenuContent

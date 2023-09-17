@@ -20,6 +20,7 @@ body {
     rgba(206, 167, 202, 1) 38%,
     rgba(185, 141, 179, 1) 89%
   );
+  background-image: url('/bg.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
 }

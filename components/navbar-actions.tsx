@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ShoppingCart } from 'lucide-react';
+import { Instagram, ShoppingCart } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 import Button from '@/components/ui/button';
@@ -22,7 +22,10 @@ const NavbarActions = () => {
   }
 
   return (
-    <div className="flex items-center gap-x-4">
+    <div className="flex items-center ">
+      <a href="https://www.instagram.com/godable.clth/" target="_blank">
+        <Instagram size={20} color="black" />
+      </a>
       <Button
         onClick={() => router.push('/cart')}
         className="flex items-center rounded-full bg-transparent px-4 py-2"
