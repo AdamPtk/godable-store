@@ -19,10 +19,11 @@ const getProducts = async (query: Query): Promise<Product[]> => {
       sizeId: query.sizeId,
       categoryId: query.categoryId,
       isFeatured: query.isFeatured,
+      isArchived: false,
     },
   });
 
-  const res = await fetch(url);
+  const res = await fetch(url, { cache: 'no-cache' });
 
   return res.json();
 };
