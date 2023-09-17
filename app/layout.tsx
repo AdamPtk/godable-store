@@ -1,4 +1,4 @@
-import { Urbanist } from 'next/font/google';
+import { Permanent_Marker } from 'next/font/google';
 
 import type { Metadata } from 'next';
 import Footer from '@/components/footer';
@@ -8,11 +8,11 @@ import ToastProvider from '@/providers/toast-provider';
 
 import './globals.css';
 
-const font = Urbanist({ subsets: ['latin'] });
+const font = Permanent_Marker({ weight: '400', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Store',
-  description: 'Store',
+  title: 'Godable',
+  description: 'Godable',
 };
 
 export default function RootLayout({

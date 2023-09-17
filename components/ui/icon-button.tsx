@@ -20,7 +20,6 @@ const IconButton: React.FC<IconButtonProps> = ({
         rounded-full 
         flex items-center 
         justify-center 
-        bg-white 
         border 
         shadow-md 
         p-2 

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import Container from '@/components/ui/container';
 import MainNav from '@/components/main-nav';
@@ -10,17 +11,22 @@ export const revalidate = 0;
 const Navbar = async () => {
   const categories = await getCategories();
   return (
-    <div className="border-b">
-      <Container>
-        <div className="relative px-4 sm:px-8 flex h-16 items-center">
-          <Link href="/" className="ml-4 flex lg:ml-0 gap-x-2">
-            <p className="font-bold text-xl">STORE</p>
+    <Container>
+      <div className="relative px-4 sm:px-8 h-24 md:h-40 flex items-center justify-between">
+        <MainNav data={categories} />
+        <div className="h-20 w-20 md:h-36 md:w-36 absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+          <Link href="/">
+            <Image
+              fill
+              src="/godable-logo.png"
+              alt=""
+              className="object-cover object-center"
+            />
           </Link>
-          <MainNav data={categories} />
-          <NavbarActions />
         </div>
-      </Container>
-    </div>
+        <NavbarActions />
+      </div>
+    </Container>
   );
 };
 

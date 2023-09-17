@@ -39,14 +39,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
   return (
     <div
       onClick={handleClick}
-      className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4"
+      className="group flex flex-col md:flex-row cursor-pointer p-3 space-y-4"
     >
-      <div className="aspect-square bg-gray-100 rounded-xl relative">
+      <div className="aspect-square rounded-xl relative w-full md:w-2/3">
         <Image
           src={data?.images?.[0].url}
           alt="Image"
           fill
-          className="aspect-square object-cover rounded-md"
+          className="aspect-square object-contain rounded-md"
         />
         <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
           <div className="flex gap-x-6 justify-center">
@@ -61,12 +61,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
           </div>
         </div>
       </div>
-      <div>
-        <p className="font-semibold text-lg">{data.name}</p>
-        <p className="text-gray-500 text-sm">{data.category?.name}</p>
-      </div>
-      <div className="flex items-center justify-between">
-        <Currency value={data?.price} />
+      <div className="flex flex-col justify-center md:ml-10">
+        <div>
+          <p className="font-semibold text-lg md:text-3xl">{data.name}</p>
+          <p className="text-gray-500 text-sm md:text-xl">
+            {data.category?.name}
+          </p>
+        </div>
+        <div>
+          <Currency className="text-lg md:text-2xl" value={data?.price} />
+        </div>
       </div>
     </div>
   );
