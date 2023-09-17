@@ -48,7 +48,10 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
         <DropdownMenuTrigger className="sm:hidden ml-4">
           <Menu />
         </DropdownMenuTrigger>
-        <DropdownMenuContent>
+        <DropdownMenuContent
+          align="start"
+          className="border-none rounded-xl theme-button-bg"
+        >
           {routes.map((route) => (
             <DropdownMenuItem key={route.href}>
               <Link

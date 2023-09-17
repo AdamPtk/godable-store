@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.theme-button-bg {
+  background-color: rgba(228, 193, 225, 0.9);
+}
+
 html,
 body,
 :root {

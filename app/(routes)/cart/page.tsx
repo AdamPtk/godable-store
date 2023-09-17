@@ -21,7 +21,7 @@ const CartPage = () => {
   }
 
   return (
-    <div className="bg-white">
+    <div>
       <Container>
         <div className="px-4 py-16 sm:px-6 lg:px-8">
           <h1 className="test-3xl font-bold text-black">Shopping Cart</h1>
