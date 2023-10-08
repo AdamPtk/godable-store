@@ -24,3 +24,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+hr,
+input,
+textarea {
+  border-color: rgb(115, 115, 115);
+}

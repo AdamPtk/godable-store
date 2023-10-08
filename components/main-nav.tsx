@@ -10,23 +10,38 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-interface MainNavProps {
-  data: Category[];
-}
+// interface MainNavProps {
+//   data: Category[];
+// }
 
-const MainNav: React.FC<MainNavProps> = ({ data }) => {
+const MainNav = () => {
   const pathname = usePathname();
+  const routes = [
+    {
+      href: '/',
+      label: 'Home',
+      active: pathname === '/',
+    },
+    {
+      href: '/about',
+      label: 'About',
+      active: pathname === '/about',
+    },
+    {
+      href: '/contact',
+      label: 'Contact',
+      active: pathname === '/contact',
+    },
+  ];
 
-  const routes = data.map((route) => ({
-    href: `/category/${route.id}`,
-    label: route.name,
-    active: pathname === `/category/${route.id}`,
-  }));
+  // const routes = data.map((route) => ({
+  //   href: `/category/${route.id}`,
+  //   label: route.name,
+  //   active: pathname === `/category/${route.id}`,
+  // }));
 
   return (
     <>
@@ -45,7 +60,7 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
         ))}
       </nav>
       <DropdownMenu>
-        <DropdownMenuTrigger className="md:hidden ml-4">
+        <DropdownMenuTrigger asChild className="md:hidden ml-4">
           <Menu />
         </DropdownMenuTrigger>
         <DropdownMenuContent
