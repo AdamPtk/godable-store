@@ -2,8 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-.theme-button-bg {
-  background-color: rgba(228, 193, 225, 0.9);
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #a16294 #e4c1e1;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #e4c1e1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #a16294;
+  border-radius: 10px;
+  border: 0px solid #ffffff;
 }
 
 html,
@@ -20,7 +38,7 @@ body {
     rgba(206, 167, 202, 1) 38%,
     rgba(185, 141, 179, 1) 89%
   );
-  background-image: url('/bg.jpg');
+  /* background-image: url('/bg.jpg'); */
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -29,4 +47,8 @@ hr,
 input,
 textarea {
   border-color: rgb(115, 115, 115);
+}
+
+.theme-elem-bg {
+  background-color: rgba(228, 193, 225, 0.9);
 }

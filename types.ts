@@ -15,6 +15,8 @@ export interface Product {
   category: Category;
   name: string;
   price: number;
+  quantity: number;
+  cartQuantity?: number;
   isFeatured: boolean;
   size: Size;
   color: Color;

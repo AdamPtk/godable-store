@@ -48,20 +48,20 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
           fill
           className="aspect-square object-contain rounded-xl"
         />
-        <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
+        {/* <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
           <div className="flex gap-x-6 justify-center">
             <IconButton
-              className="theme-button-bg"
+              className="theme-elem-bg"
               onClick={onPreview}
               icon={<Expand size={20} />}
             />
             <IconButton
-              className="theme-button-bg"
+              className="theme-elem-bg"
               onClick={onAddToCart}
               icon={<ShoppingCart size={20} />}
             />
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="flex flex-col justify-center md:ml-10">
         <div>

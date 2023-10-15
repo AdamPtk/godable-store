@@ -65,7 +65,7 @@ const MainNav = () => {
         </DropdownMenuTrigger>
         <DropdownMenuContent
           align="start"
-          className="border-none rounded-xl theme-button-bg"
+          className="border-none rounded-xl theme-elem-bg"
         >
           {routes.map((route) => (
             <DropdownMenuItem key={route.href}>

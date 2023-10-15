@@ -3,14 +3,13 @@ import getProducts from '@/actions/get-products';
 import Billboard from '@/components/billboard';
 import ProductList from '@/components/product-list';
 import Container from '@/components/ui/container';
-import { Skeleton } from '@/components/ui/skeleton';
 
 export const revalidate = 0;
 
 const HomePage = async () => {
   const products = await getProducts({ isFeatured: true });
   const billboard = await getBillboard('635eac62-a5b9-43ed-bdd4-54d04673fc3c');
-  console.log(billboard);
+
   return (
     <Container>
       <div className="space-y-4 pb-10">
